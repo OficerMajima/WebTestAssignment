@@ -1,0 +1,29 @@
+CREATE TABLE UserTable 
+(
+    ID int identity(1,1) not null,
+    Login varchar(50) not null, 
+    Username varchar(50) not null
+)
+CREATE TABLE ProductTable 
+(
+    ID int identity(1,1) not null,
+    Name varchar(50) not null, 
+    Price decimal(18,0) not null
+)
+CREATE TABLE UserOrders 
+(
+    ID int identity(1,1) not null,
+    OrderDate datetime not null, 
+    Price decimal(18,0) not null,
+	UserID int not null
+)
+
+INSERT INTO UserTable (Login, Username)
+VALUES ('Login1', 'User1'),
+       ('Login2', 'User2')
+
+INSERT INTO ProductTable (Name, Price)
+VALUES ('1Sock', 5),
+       ('2Sock', 15),
+	   ('Toothpaste', 7)
+      
